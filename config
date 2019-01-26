@@ -1,0 +1,7 @@
+# Raspjamming base image
+IMG_NAME=Raspjamming
+WPA_ESSID=Raspjamming
+WPA_PASSWORD=Raspjamming@GLT
+WPA_COUNTRY=AT
+ENABLE_SSH=1
+STAGE_LIST="stage0 stage1 stage2 stageA"

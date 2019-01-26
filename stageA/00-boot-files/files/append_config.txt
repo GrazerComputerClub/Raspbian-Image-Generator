@@ -1,0 +1,16 @@
+# activate OTG mode
+[pi0]
+dtoverlay=dwc2
+[all]
+
+gpu_mem_128=32
+gpu_mem_512=48
+
+# activate to overclock Paspberry Pi Zero ~3 percent 
+#include Overclock_Pi0.txt
+
+# activate for Pi-XO hardware (check display setting)
+#include Pi-XO.txt 
+
+
+
