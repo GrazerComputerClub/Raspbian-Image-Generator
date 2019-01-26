@@ -2,6 +2,9 @@
 
 _Tool used to create the raspberrypi.org Raspbian images_
 
+## Modifed by Grazer Computer Club
+- Default settings for Austria
+- Image for Raspjamming Event with all needed programs and projects preinstalled (StageA)    
 
 ## Dependencies
 
