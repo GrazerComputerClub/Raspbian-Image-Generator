@@ -8,5 +8,5 @@ adduser nobody audio
 systemctl enable dmxvnc
 systemctl enable splashscreen
 systemctl enable offscreen
-#systemctl enable mcp3202
-
+systemctl enable mcp3202
+systemctl enable blockly-gpio
