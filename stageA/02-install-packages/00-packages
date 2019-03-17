@@ -2,6 +2,6 @@ mono-complete
 python-dev python-openssl rpi.gpio python-pip
 python3-dev python3-openssl python3-rpi.gpio python3-gpiozero python3-pip python3-websocket
 raspi-gpio geany rxvt-unicode vim wiringpi pigpio git build-essential automake cmake
-minicom screen
+minicom screen avrdude
 fbi
 

@@ -1,0 +1,11 @@
+--- /etc/avrdude.conf.bkup	2019-03-17 21:11:07.205792963 +0100
++++ /etc/avrdude.conf	2019-03-17 21:11:36.775782944 +0100
+@@ -1283,6 +1283,6 @@
+   desc = "Use Linux SPI device in /dev/spidev*";
+   type = "linuxspi";
+   reset = 25;
+-  baudrate=400000;
++  baudrate=200000;
+ ;
+ 
+
