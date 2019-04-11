@@ -6,6 +6,11 @@ _Tool used to create the raspberrypi.org Raspbian images_
 - Default settings for Austria
 - Image for Raspjamming Event with all needed programs and projects preinstalled (StageA)    
 
+To install the additional required dependencies:
+```bash
+apt-get install patch perl
+```
+
 ## Dependencies
 
 pi-gen runs on Debian based operating systems. Currently it is only supported on
