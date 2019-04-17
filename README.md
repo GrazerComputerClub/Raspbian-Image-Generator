@@ -5,11 +5,11 @@ _Tool used to create the raspberrypi.org Raspbian images_
 ## Modifed by Grazer Computer Club
  * lite-Image [Stage0-2]:
    - Default settings for Austria
-   - Acivate ssh service
-   - Default WLAN settings
+   - Activate ssh service
+   - Default Raspjamming WLAN settings
    
  * full-Image [+StageA]:
-   - Image for Raspjamming Event with all needed programs and projects preinstalled    
+   - All needed programs and projects for Raspjamming Event preinstalled    
 
 To install the additional required dependencies:
 ```bash
