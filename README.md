@@ -10,6 +10,7 @@ _Tool used to create the raspberrypi.org Raspbian images_
    
  * full-Image [+StageA]:
    - German keyboard
+   - Ethernet Gadget with DHCP server (for use with Pi Zero)  
    - All needed programs and projects for Raspjamming Event preinstalled    
 
 To install the additional required dependencies:
