@@ -3,7 +3,7 @@
 _Tool used to create the raspberrypi.org Raspbian images_
 
 ## Modifed by Grazer Computer Club
- * lite-Image [Stage1-3]:
+ * lite-Image [Stage0-2]:
    - Default settings for Austria
    - Acivate ssh service
    - Default WLAN settings
