@@ -6,7 +6,7 @@ _Tool used to create the raspberrypi.org Raspbian images_
  * lite-Image [Stage1-3]:
    - Default settings for Austria
    - Acivate ssh service
-   - Default WLAN settngs
+   - Default WLAN settings
    
  * full-Image [+StageA]:
    - Image for Raspjamming Event with all needed programs and projects preinstalled    
