@@ -3,6 +3,8 @@
 ## Blockly-gPIo
 # pi user/group id is 1000
 BLOCKLY_USER=1000
+WWW_USER=1000
+PI_USER=1000
 rm -rf files/git
 git clone https://github.com/GrazerComputerClub/Blockly-gPIo.git files/git
 install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 775 -d "${ROOTFS_DIR}/opt/Blockly-gPIo/"
@@ -13,7 +15,7 @@ install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 664 files/git/server/*.py "$
 install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo/"
 cp -r public/* "${ROOTFS_DIR}/var/www/html/Blockly-gPIo" 
 
-## Pi-XO and more...
+## Raspjamming-Image installation
 rm -rf files/git
 git clone https://github.com/GrazerComputerClub/Raspjamming-Image/ files/git
 install -v -m 755 -d "${ROOTFS_DIR}/usr/share/png/"
@@ -29,6 +31,13 @@ install -v -m 775 files/git/bin/* "${ROOTFS_DIR}/usr/local/bin/"
 install -v -m 664 files/git/systemd/*.service "${ROOTFS_DIR}/etc/systemd/system/"
 #deactivated - because of manual start fbcp via pico8 start script
 #install -m 664 files/udev/*.rules "${ROOTFS_DIR}/etc/udev/rules.d/"
+rm /var/www/index.html
+cp -rv files/git/www/* "${ROOTFS_DIR}/var/www/html"
+#install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/PDF"
+wget -P "${ROOTFS_DIR}/var/www/html/PDF" https://github.com/GrazerComputerClub/Raspjamming/releases/latest/download/Raspjamming.pdf
 rm -rf files/git
 
+## aliases
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/.bash_aliases_GC2xHAT "${ROOTFS_DIR}/home/pi/"
+patch ${ROOTFS_DIR}/home/pi/.bashrc files/bashrc.patch
 
