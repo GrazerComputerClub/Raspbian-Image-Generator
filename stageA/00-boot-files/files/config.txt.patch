@@ -1,0 +1,10 @@
+--- /boot/config.txt.old	2019-04-21 08:25:29.000000000 +0200
++++ /boot/config.txt	2019-04-21 08:26:11.000000000 +0200
+@@ -45,5 +45,5 @@
+ # Uncomment some or all of these to enable the optional hardware interfaces
+-#dtparam=i2c_arm=on
++dtparam=i2c_arm=on
+ #dtparam=i2s=on
+-#dtparam=spi=on
++dtparam=spi=on
+ 
