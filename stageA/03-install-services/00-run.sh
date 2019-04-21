@@ -12,8 +12,11 @@ install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 664 files/git/*.py "${ROOTFS
 install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 644 files/git/LICENSE "${ROOTFS_DIR}/opt/Blockly-gPIo/"
 install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 775 -d "${ROOTFS_DIR}/opt/Blockly-gPIo/server"
 install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 664 files/git/server/*.py "${ROOTFS_DIR}/opt/Blockly-gPIo/server/"
-install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo/"
-cp -r public/* "${ROOTFS_DIR}/var/www/html/Blockly-gPIo" 
+# Blockly Website 
+install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo/"
+cp -r files/git/public/* "${ROOTFS_DIR}/var/www/html/Blockly-gPIo" 
+install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/"
+cp -r files/git/examples/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/"
 
 ## Raspjamming-Image installation
 rm -rf files/git
