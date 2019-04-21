@@ -34,7 +34,8 @@ install -v -m 775 files/git/bin/* "${ROOTFS_DIR}/usr/local/bin/"
 install -v -m 664 files/git/systemd/*.service "${ROOTFS_DIR}/etc/systemd/system/"
 #deactivated - because of manual start fbcp via pico8 start script
 #install -m 664 files/udev/*.rules "${ROOTFS_DIR}/etc/udev/rules.d/"
-rm /var/www/index.html
+file="${ROOTFS_DIR}/var/www/html/index.html"
+[ -f $file ] && rm $file 
 cp -rv files/git/www/* "${ROOTFS_DIR}/var/www/html"
 #install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/PDF"
 wget -P "${ROOTFS_DIR}/var/www/html/PDF" https://github.com/GrazerComputerClub/Raspjamming/releases/latest/download/Raspjamming.pdf
@@ -42,5 +43,5 @@ rm -rf files/git
 
 ## aliases
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/.bash_aliases_GC2xHAT "${ROOTFS_DIR}/home/pi/"
-patch ${ROOTFS_DIR}/home/pi/.bashrc files/bashrc.patch
+patch -N ${ROOTFS_DIR}/home/pi/.bashrc files/bashrc.patch
 

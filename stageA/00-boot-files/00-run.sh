@@ -6,7 +6,7 @@ install -m 644 files/git/*.txt ${ROOTFS_DIR}/boot/
 install -m 644 files/git/overlays/*.dtbo ${ROOTFS_DIR}/boot/overlays/
 perl -i -p -e 's/\n/ /' ${ROOTFS_DIR}/boot/cmdline.txt
 cat files/append_cmdline.txt >> ${ROOTFS_DIR}/boot/cmdline.txt
-patch ${ROOTFS_DIR}/boot/config.txt files/config.txt.patch
+patch -N ${ROOTFS_DIR}/boot/config.txt files/config.txt.patch
 cat files/append_config.txt >> ${ROOTFS_DIR}/boot/config.txt
 cat files/append_dhcpcd.conf >> ${ROOTFS_DIR}/etc/dhcpcd.conf
 cat files/append_dhcpd.conf >> ${ROOTFS_DIR}/etc/dhcp/dhcpd.conf

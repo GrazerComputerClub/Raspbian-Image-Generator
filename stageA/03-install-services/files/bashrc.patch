@@ -1,17 +1,18 @@
---- .bashrc	2019-04-21 10:48:19.137400000 +0200
-+++ bashrc.orig	2019-04-21 11:06:37.367400000 +0200
-@@ -101,14 +101,6 @@
+--- .bashrc.old	2019-04-21 07:38:19.541052172 +0200
++++ .bashrc	2019-04-21 10:48:19.137400000 +0200
+@@ -101,6 +101,14 @@
      . ~/.bash_aliases
  fi
  
--# bash alias GC2-xHAT
--if [ -f /proc/device-tree/hat/product_id ]; then
--    PRODUCT_ID=$(tr -d '\0' < /proc/device-tree/hat/product_id)
--    if [ "${PRODUCT_ID}" == "0x6c20" ]; then
--    	. ~/.bash_aliases_GC2xHAT
--    fi
--fi
--
++# bash alias GC2-xHAT
++if [ -f /proc/device-tree/hat/product_id ]; then
++    PRODUCT_ID=$(tr -d '\0' < /proc/device-tree/hat/product_id)
++    if [ "${PRODUCT_ID}" == "0x6c20" ]; then
++    	. ~/.bash_aliases_GC2xHAT
++    fi
++fi
++
  # enable programmable completion features (you don't need to enable
  # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
  # sources /etc/bash.bashrc).
+
