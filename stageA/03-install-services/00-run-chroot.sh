@@ -1,12 +1,14 @@
 #!/bin/bash -e
 
+WWW_USER=33
+
 # tiggerhappy: shutdown
 chmod u+s /sbin/halt
 # tiggerhappy: speaker level control
 adduser nobody audio
 
-chown -R 1000:1000 /var/www/
-#chown -R 1000:1000 /var/www/html/Blockly-gPIo/
+chown -R ${WWW_USER}:${WWW_USER} /var/www/
+#chown -R ${WWW_USER}:${WWW_USER} /var/www/html/Blockly-gPIo/
 
 systemctl enable dmxvnc
 systemctl enable splashscreen

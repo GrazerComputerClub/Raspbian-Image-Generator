@@ -1,0 +1,23 @@
+--- lighttpd.conf.orig	2019-04-21 19:05:42.475569847 +0200
++++ lighttpd.conf	2019-04-21 21:07:39.093137064 +0200
+@@ -3,6 +3,8 @@
+ 	"mod_alias",
+ 	"mod_compress",
+  	"mod_redirect",
++ 	"mod_dirlisting",
++	"mod_setenv",
+ )
+ 
+ server.document-root        = "/var/www/html"
+@@ -24,3 +26,11 @@
+ include_shell "/usr/share/lighttpd/use-ipv6.pl " + server.port
+ include_shell "/usr/share/lighttpd/create-mime.assign.pl"
+ include_shell "/usr/share/lighttpd/include-conf-enabled.pl"
++
++dir-listing.activate = "enable"
++dir-listing.encoding = "iso-8859-1"
++dir-listing.external-css    = "/lighttpd-dir.css" 
++$HTTP["url"] =~ "\.xml$" {
++  setenv.add-response-header = ( "Content-Disposition" => "attachment" )
++  mimetype.assign = ( "" => "text/plain" )
++}

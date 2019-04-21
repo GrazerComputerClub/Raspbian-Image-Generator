@@ -3,7 +3,7 @@
 ## Blockly-gPIo
 # pi user/group id is 1000
 BLOCKLY_USER=1000
-WWW_USER=1000
+WWW_USER=33
 PI_USER=1000
 rm -rf files/git
 git clone https://github.com/GrazerComputerClub/Blockly-gPIo.git files/git
