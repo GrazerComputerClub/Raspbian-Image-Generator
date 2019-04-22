@@ -3,15 +3,17 @@
 _Tool used to create the raspberrypi.org Raspbian images_
 
 ## Modifed by Grazer Computer Club
- * lite-Image [Stage0-2] - 2GB:
+ * lite-Image [Stage0-2] - 1.8 GB:
    - Default settings for Austria
    - Activate ssh service
    - Default Raspjamming WLAN settings
    
- * full-Image [+StageA] - 2.4GB:
+ * full-Image [+StageA] - 2.4 GB:
    - German keyboard
    - Ethernet Gadget with DHCP server (for use with Pi Zero)  
-   - All needed programs and projects for Raspjamming Event preinstalled    
+   - All needed programs and projects for Raspjamming Event preinstalled 
+   - Web-Server with Blockly-gPIo visual programming Website and execute service    
+   - Support for GC2-xHAT (Show IP address, aliases)
 
 To install the additional required dependencies:
 ```bash
