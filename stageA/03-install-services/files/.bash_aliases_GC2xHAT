@@ -11,6 +11,6 @@ alias orangeoff='gpio mode 28 in; gpio mode 28 down'
 alias greenon='gpio mode 29 out; gpio write 29 1'
 alias greenglow='gpio mode 29 in; gpio mode 29 up'
 alias greenoff='gpio mode 29 in; gpio mode 29 down'
-alias ledoff='redon; orangeon; greenon'
+alias ledon='redon; orangeon; greenon'
 alias ledoff='greenoff; orangeoff; redoff'
 
