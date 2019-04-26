@@ -216,7 +216,7 @@ log "Begin ${BASE_DIR}"
 STAGE_LIST=${STAGE_LIST:-${BASE_DIR}/stage*}
 
 for STAGE_DIR in $STAGE_LIST; do
-	STAGE_DIR=$(realpath "${STAGE_DIR}")
+	STAGE_DIR=$(readlink -f "${STAGE_DIR}")
 	run_stage
 done
 
