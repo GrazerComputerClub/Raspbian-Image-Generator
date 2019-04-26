@@ -3,8 +3,13 @@
 dtoverlay=dwc2
 [all]
 
+
+
 gpu_mem_128=32
 gpu_mem_512=48
+
+#activate UART/RS232
+enable_uart=1
 
 # activate to overclock Paspberry Pi Zero ~3% 
 #include Overclock_Pi0.txt
