@@ -19,6 +19,9 @@ To install the additional required dependencies:
 ```bash
 apt-get install patch perl
 ```
+Raspjamming release download:  
+[https://github.com/GrazerComputerClub/Raspjamming-Image](https://github.com/GrazerComputerClub/Raspjamming-Image)
+
 
 ## Dependencies
 
