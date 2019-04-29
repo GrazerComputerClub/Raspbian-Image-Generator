@@ -42,6 +42,8 @@ wget -P "${ROOTFS_DIR}/var/www/html/PDF" https://github.com/GrazerComputerClub/R
 rm -rf files/git
 
 ## aliases
-install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/.bash_aliases_GC2xHAT "${ROOTFS_DIR}/home/pi/"
+wget https://github.com/GrazerComputerClub/GC2-xHAT/raw/master/aliases/bash_aliases_GC2xHAT -O files/.bash_aliases_GC2xHAT 
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/.bash_aliases* "${ROOTFS_DIR}/home/pi/"
 patch -N ${ROOTFS_DIR}/home/pi/.bashrc files/bashrc.patch
+
 
