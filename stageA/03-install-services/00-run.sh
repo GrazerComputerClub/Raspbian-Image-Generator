@@ -43,7 +43,7 @@ rm -rf files/git
 
 ## GC2-xHAT
 ## eeprom-settings
-wget https://raw.githubusercontent.com/GrazerComputerClub/GC2-xHAT/master/EEPROM/eeprom_settings.txt -P files/GC2-xHAT_eeprom_settings.txt 
+wget https://raw.githubusercontent.com/GrazerComputerClub/GC2-xHAT/master/EEPROM/eeprom_settings.txt -O files/GC2-xHAT_eeprom_settings.txt 
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/GC2-xHAT_eeprom_settings.txt "${ROOTFS_DIR}/usr/local/bin/"
 ## aliases
 wget https://github.com/GrazerComputerClub/GC2-xHAT/raw/master/aliases/bash_aliases_GC2xHAT -O files/.bash_aliases_GC2xHAT 
