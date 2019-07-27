@@ -26,7 +26,7 @@ Raspjamming release download:
 ## Dependencies
 
 pi-gen runs on Debian based operating systems. Currently it is only supported on
-either Debian Stretch or Ubuntu Xenial and is known to have issues building on
+either Debian Buster or Ubuntu Xenial and is known to have issues building on
 earlier releases of these systems. On other Linux distributions it may be possible
 to use the Docker build described below.
 
@@ -116,7 +116,7 @@ The following environment variables are supported:
 
  * `STAGE_LIST` (Default: `stage*`)
 
-    If set, then instead of working through the numeric stages in order, this list will be followed. For example setting to `stage0 stage1 mystage stage2` will run the contents of `mystage` before stage2. An absolute or relative path can be given for stages outside the pi-gen directory.
+    If set, then instead of working through the numeric stages in order, this list will be followed. For example setting to `"stage0 stage1 mystage stage2"` will run the contents of `mystage` before stage2. Note that quotes are needed around the list. An absolute or relative path can be given for stages outside the pi-gen directory.
 
 A simple example for building Raspbian:
 
@@ -314,6 +314,9 @@ follows:
    export your image to test
 
 # Troubleshooting
+
+## `64 Bit Systems`
+Please note there is currently an issue when compiling with a 64 Bit OS. See https://github.com/RPi-Distro/pi-gen/issues/271
 
 ## `binfmt_misc`
 
