@@ -14,9 +14,14 @@ install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 775 -d "${ROOTFS_DIR}/opt/Bl
 install -v -o ${BLOCKLY_USER} -g ${BLOCKLY_USER} -m 664 files/git/server/*.py "${ROOTFS_DIR}/opt/Blockly-gPIo/server/"
 # Blockly Website 
 install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo/"
-cp -r files/git/public/* "${ROOTFS_DIR}/var/www/html/Blockly-gPIo" 
+cp -r files/git/public/* "${ROOTFS_DIR}/var/www/html/Blockly-gPIo"
 install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/"
-cp -r files/git/examples/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/"
+install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/Deutsch/"
+install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/English/"
+#cp -v files/git/examples/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/"
+cp -v files/git/examples/Deutsch/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/Deutsch"
+cp -v files/git/examples/English/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/English"
+unzip files/lighttpd_cache.zip -d "${ROOTFS_DIR}/var/cache/lighttpd/compress/"
 
 ## Raspjamming-Image installation
 rm -rf files/git
@@ -32,6 +37,9 @@ echo -e "\n\nexit 0" >> ${ROOTFS_DIR}/etc/rc.local
 install -v -m 664 files/git/etc/triggerhappy/* "${ROOTFS_DIR}/etc/triggerhappy/triggers.d/"
 install -v -m 775 files/git/bin/* "${ROOTFS_DIR}/usr/local/bin/"
 install -v -m 664 files/git/systemd/*.service "${ROOTFS_DIR}/etc/systemd/system/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 775 -d "${ROOTFS_DIR}/home/pi/scripts/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/git/scripts/* "${ROOTFS_DIR}/home/pi/scripts/"
+
 #deactivated - because of manual start fbcp via pico8 start script
 #install -m 664 files/udev/*.rules "${ROOTFS_DIR}/etc/udev/rules.d/"
 file="${ROOTFS_DIR}/var/www/html/index.html"
@@ -45,9 +53,10 @@ rm -rf files/git
 ## eeprom-settings
 wget https://raw.githubusercontent.com/GrazerComputerClub/GC2-xHAT/master/EEPROM/eeprom_settings.txt -O files/GC2-xHAT_eeprom_settings.txt 
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/GC2-xHAT_eeprom_settings.txt "${ROOTFS_DIR}/usr/local/bin/"
+rm files/GC2-xHAT_eeprom_settings.txt
 ## aliases
 wget https://github.com/GrazerComputerClub/GC2-xHAT/raw/master/aliases/bash_aliases_GC2xHAT -O files/.bash_aliases_GC2xHAT 
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/.bash_aliases* "${ROOTFS_DIR}/home/pi/"
+rm files/.bash_aliases_GC2xHAT 
 patch -N ${ROOTFS_DIR}/home/pi/.bashrc files/bashrc.patch
-
 

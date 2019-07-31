@@ -1,27 +1,45 @@
-# activate OTG mode
+
+# video 720p if no monitor detected
+[EDID=]
+include Video-720p.txt 
+[all]
+
+# activate OTG mode Raspberry Pi Zero
 [pi0]
 dtoverlay=dwc2
 [all]
 
+#activate UART/RS232
+enable_uart=1
 
+
+## GPU memory 
 
 gpu_mem_128=32
 gpu_mem_512=48
 
-#activate UART/RS232
-enable_uart=1
 
-# activate to overclock Paspberry Pi Zero ~3% 
+## Overclock
+
+# activate overclocking Raspberry Pi Zero (~3%) 
 #include Overclock_Pi0.txt
+
+# activate Modest overclocking Paspberry Pi 1 (~14%)
+#include OverclockModest_Pi1.txt
+
+# activate Turbo overclock Paspberry Pi 1 (~40%)
+#include OverclockTurbo_Pi1.txt
+
+
+## Additional GPIO hardware
 
 # activate for Pi-XO hardware (check display setting)
 #include Pi-XO.txt 
 
-# I2C0 EEPROM HAT 
+# I2C0 EEPROM HAT (programming) 
 #dtparam=i2c_vc=on
 
-#DS18B20 at pin 4
+# DS18B20 at GPIO pin 4
 #dtoverlay=w1-gpio,gpiopin=4,pullup=on
-
 
 

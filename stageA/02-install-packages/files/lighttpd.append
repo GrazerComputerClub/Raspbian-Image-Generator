@@ -1,0 +1,12 @@
+server.modules += (
+	"mod_dirlisting",
+	"mod_setenv",
+)
+
+dir-listing.activate = "enable"
+dir-listing.encoding = "iso-8859-1"
+dir-listing.external-css    = "/lighttpd-dir.css" 
+$HTTP["url"] =~ "\.xml$" {
+  setenv.add-response-header = ( "Content-Disposition" => "attachment" )
+  mimetype.assign = ( "" => "text/plain" )
+}

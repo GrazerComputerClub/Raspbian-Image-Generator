@@ -1,8 +1,8 @@
 --- lighttpd.conf.orig	2019-04-21 19:05:42.475569847 +0200
 +++ lighttpd.conf	2019-04-21 21:07:39.093137064 +0200
 @@ -3,6 +3,8 @@
+ 	"mod_access",
  	"mod_alias",
- 	"mod_compress",
   	"mod_redirect",
 + 	"mod_dirlisting",
 +	"mod_setenv",

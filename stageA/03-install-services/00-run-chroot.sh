@@ -9,6 +9,7 @@ adduser nobody audio
 
 chown -R ${WWW_USER}:${WWW_USER} /var/www/
 #chown -R ${WWW_USER}:${WWW_USER} /var/www/html/Blockly-gPIo/
+chown -R ${WWW_USER}:${WWW_USER} /var/cache/lighttpd/compress/
 
 systemctl enable dmxvnc
 systemctl enable splashscreen

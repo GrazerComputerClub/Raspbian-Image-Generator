@@ -3,14 +3,7 @@
 PI_USER=1000
 
 install -v -o ${PI_USER} -g ${PI_USER} -m 775 -d "${ROOTFS_DIR}/home/pi/Projekte/"
-install -v -o ${PI_USER} -g ${PI_USER} -m 775 -d "${ROOTFS_DIR}/home/pi/scripts/"
 
-##scripts
-rm -rf files/git
-git clone https://github.com/woergi/Raspjamming_Scripts files/git
-install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/git/* "${ROOTFS_DIR}/home/pi/scripts/"
-
-##scripts
 rm -rf files/*
 git clone https://github.com/GrazerComputerClub/TM1637Display.git files/TM1637Display
 git clone https://github.com/GrazerComputerClub/Sensors-WiringPi.git files/Sensors-WiringPi
