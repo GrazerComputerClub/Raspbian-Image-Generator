@@ -33,6 +33,12 @@ gpu_mem_512=48
 
 ## Additional GPIO hardware
 
+# activate for Waveshare 1,44" LCD HAT hardware (check display setting)
+#include WaveshareLCDHAT.txt
+# activate for Waveshare 1,44" LCD HAT default or PICO8 key mapping
+#include WaveShareLCDHAT_Keys.txt
+#include WaveShareLCDHAT_PICO8_Keys.txt
+
 # activate for Pi-XO hardware (check display setting)
 #include Pi-XO.txt 
 
