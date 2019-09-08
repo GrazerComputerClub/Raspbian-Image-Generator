@@ -1,0 +1,4 @@
+# 'CIRCLean - USB key sanitizer' generic image generation by GC2
+IMG_NAME=CIRCLean-USB-Sanitizer
+FIRST_USER_PASS=sanitizer
+STAGE_LIST="stage0 stage1 stage2 stageS"

@@ -1,0 +1,13 @@
+[Unit]
+Description=USB activity LED
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/usb_led -pin 20 -min 50kbps 
+StandardOutput=null
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+
