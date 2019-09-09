@@ -15,7 +15,8 @@ KITTEN_GROUP=1004
 #cd ..
 #rm -r rar
 apt-get install /home/pi/p7zip-rar_16.02-3_armhf.deb
-rm /home/pi/p7zip-rar_16.02-3_armhf.deb
+apt-get install /home/pi/wiringpi-latest.deb
+rm /home/pi/*.deb
 
 #https://github.com/CIRCL/PyCIRCLean/blob/master/Makefile
 pip3 install olefile oletools exifread pillow -t /usr/local/lib/python3.7/dist-packages

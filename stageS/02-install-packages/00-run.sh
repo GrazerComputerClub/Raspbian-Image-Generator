@@ -3,7 +3,7 @@
 KITTEN_USER=1001
 KITTEN_GROUP=1004
 
-cp files/p7zip-rar_16.02-3_armhf.deb ${ROOTFS_DIR}/home/pi
+cp files/*.deb "${ROOTFS_DIR}/home/pi"
 
 rm -f files/pdfid.zip
 rm -rf files/pdfid/
