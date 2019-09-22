@@ -18,6 +18,10 @@ wget https://github.com/CIRCL/PyCIRCLean/raw/master/filecheck/filecheck.py -P fi
 install -v -o ${KITTEN_USER} -g ${KITTEN_GROUP} -m 775 files/filecheck.py "${ROOTFS_DIR}/usr/local/bin/"
 rm -f files/filecheck.py
 
+rm -f files/requirements.txt
+wget https://github.com/CIRCL/PyCIRCLean/raw/master/requirements.txt -P files/
+cp files/requirements.txt "${ROOTFS_DIR}/home/pi"
+
 # needed for USB activity LED 
 cat files/append_modules >> ${ROOTFS_DIR}/etc/modules
 

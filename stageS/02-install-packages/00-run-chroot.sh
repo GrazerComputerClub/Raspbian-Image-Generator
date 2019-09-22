@@ -19,9 +19,11 @@ apt-get install /home/pi/wiringpi-latest.deb
 rm /home/pi/*.deb
 
 #https://github.com/CIRCL/PyCIRCLean/blob/master/Makefile
-pip3 install olefile oletools exifread pillow -t /usr/local/lib/python3.7/dist-packages
-pip3 install git+https://github.com/Rafiot/officedissector.git -t /usr/local/lib/python3.7/dist-packages
-pip3 install git+https://github.com/CIRCL/PyCIRCLean.git -t /usr/local/lib/python3.7/dist-packages
+#pip3 install olefile oletools exifread pillow -t /usr/local/lib/python3.7/dist-packages
+#pip3 install git+https://github.com/Rafiot/officedissector.git -t /usr/local/lib/python3.7/dist-packages
+#pip3 install git+https://github.com/CIRCL/PyCIRCLean.git -t /usr/local/lib/python3.7/dist-packages
+pip3 install -r /home/pi/requirements.txt -t /usr/local/lib/python3.7/dist-packages
+rm /home/pi/requirements.txt
 
 if [ $(getent group kitten) ]; then
   echo "kitten group already exists."
