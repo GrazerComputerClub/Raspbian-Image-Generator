@@ -20,7 +20,7 @@ rm /home/pi/*.deb
 
 #https://github.com/CIRCL/PyCIRCLean/
 pip3 install olefile oletools exifread pillow lxml -t /usr/local/lib/python3.7/dist-packages
-#pip3 install git+https://github.com/grierforensics/officedissector.git -t /usr/local/lib/python3.7/dist-packages
+pip3 install git+https://github.com/grierforensics/officedissector.git -t /usr/local/lib/python3.7/dist-packages
 #pip3 install git+https://github.com/Rafiot/officedissector.git -t /usr/local/lib/python3.7/dist-packages
 pip3 install git+https://github.com/CIRCL/PyCIRCLean.git -t /usr/local/lib/python3.7/dist-packages
 
