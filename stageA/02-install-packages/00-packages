@@ -6,4 +6,5 @@ raspi-gpio geany rxvt-unicode vim wiringpi pigpio git build-essential automake c
 minicom screen avrdude gcc-avr avr-libc esptool i2c-tools
 fbi
 lighttpd
+privoxy
 
