@@ -45,7 +45,10 @@ gpu_mem_512=48
 # I2C0 EEPROM HAT (programming) 
 #dtparam=i2c_vc=on
 
-# DS18B20 at GPIO pin 4
+# DS18B20 temperatur sensor at GPIO4
 #dtoverlay=w1-gpio,gpiopin=4,pullup=on
+
+# TSOP4838 IR-receiver at GPIO27
+#dtoverlay=gpio-ir,gpio_pin=27
 
 
