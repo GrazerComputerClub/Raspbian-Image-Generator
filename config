@@ -1,6 +1,7 @@
 # Raspjamming base image
 IMG_NAME=Raspjamming
 DEPLOY_ZIP=1
+HOSTNAME=raspberrypi
 WPA_ESSID=Raspjamming
 WPA_PASSWORD=Raspjamming@GC2
 WPA_COUNTRY=AT
