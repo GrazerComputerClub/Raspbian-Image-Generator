@@ -20,9 +20,12 @@ cp files/*.deb "${ROOTFS_DIR}/home/pi"
 tar xzvf files/geany-gtk2.tar.gz -C "${ROOTFS_DIR}/usr/bin/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
 tar xzvf files/geany-gtk2-lib.tar.gz -C "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
-install -v -o ${PI_USER} -g ${PI_USER} -m 664 files/geany.gtkrc "${ROOTFS_DIR}/usr/share/geany/"
-install -v -o ${PI_USER} -g ${PI_USER} -m 664 files/keybindings.conf "${ROOTFS_DIR}/home/pi/.config/geany/"
-install -v -o ${PI_USER} -g ${PI_USER} -m 664 files/geany.conf "${ROOTFS_DIR}/home/pi/.config/geany/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/geany.gtkrc "${ROOTFS_DIR}/usr/share/geany/"
+
+install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/geany"
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/keybindings.conf "${ROOTFS_DIR}/home/pi/.config/geany/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/geany.conf "${ROOTFS_DIR}/home/pi/.config/geany/"
 
 rm -rf files/bcmstat
 git clone https://github.com/MilhouseVH/bcmstat.git files/bcmstat
