@@ -5,13 +5,14 @@ _Tool used to create the raspberrypi.org Raspbian images_
 ## Modifed by Grazer Computer Club
  * full-Image [Stage0-2+StageA] - 2.4 GB:
    - Default settings for Austria
-   - Activate ssh service
-   - Default Raspjamming WLAN settings
    - German keyboard
-   - Ethernet Gadget with DHCP server (for use with Pi Zero)  
-   - All needed programs and projects for Raspjamming Event preinstalled 
-   - Web-Server with Blockly-gPIo visual programming Website and execute service    
+   - ssh service activated
+   - Default Raspjamming WLAN settings
+   - Ethernet Gadget with DHCP server (Raspberry Pi Zero)  
+   - All needed programs and projects for Raspjamming Event avaliable 
+   - Web-Server with Blockly-gPIo visual programming website and execute service preinstalled   
    - Support for GC2-xHAT (Show IP address, aliases)
+   - AVR and ESP8266 tools
    
    next release:
    - geany GTK2 for ARM11 single core CPU (Raspberry Pi Zero)  
@@ -19,7 +20,7 @@ _Tool used to create the raspberrypi.org Raspbian images_
 
 To install the additional required dependencies:
 ```bash
-apt-get install patch perl
+apt-get install patch perl tar
 ```
 Raspjamming release download:  
 [https://github.com/GrazerComputerClub/Raspjamming-Image](https://github.com/GrazerComputerClub/Raspjamming-Image)
