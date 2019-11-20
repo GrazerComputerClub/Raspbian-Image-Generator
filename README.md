@@ -16,7 +16,8 @@ _Tool used to create the raspberrypi.org Raspbian images_
    
    next release:
    - geany GTK2 for ARM11 single core CPU (Raspberry Pi Zero)  
-   - Patched lirc version for GPIO IR-Sensor preinstalled
+   - Patched lirc version for GPIO IR-Sensor installed
+   - [bcmstat](https://github.com/MilhouseVH/bcmstat) avaliable
 
 To install the additional required dependencies:
 ```bash
