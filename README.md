@@ -3,17 +3,19 @@
 _Tool used to create the raspberrypi.org Raspbian images_
 
 ## Modifed by Grazer Computer Club
- * lite-Image [Stage0-2] - 1.8 GB:
+ * full-Image [Stage0-2+StageA] - 2.4 GB:
    - Default settings for Austria
    - Activate ssh service
    - Default Raspjamming WLAN settings
-   
- * full-Image [+StageA] - 2.4 GB:
    - German keyboard
    - Ethernet Gadget with DHCP server (for use with Pi Zero)  
    - All needed programs and projects for Raspjamming Event preinstalled 
    - Web-Server with Blockly-gPIo visual programming Website and execute service    
    - Support for GC2-xHAT (Show IP address, aliases)
+   
+   next release:
+   - geany GTK2 for ARM11 single core CPU (Raspberry Pi Zero)  
+   - Patched lirc version for GPIO IR-Sensor preinstalled
 
 To install the additional required dependencies:
 ```bash
