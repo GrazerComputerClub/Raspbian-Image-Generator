@@ -15,17 +15,28 @@ rm files/v2.2.1.zip
 
 cp files/*.deb "${ROOTFS_DIR}/home/pi"
 
+install -v -m 755 -d "${ROOTFS_DIR}/usr/share/fonts/truetype/sourcecodepro"
+#wget https://github.com/adobe-fonts/source-code-pro/raw/release/TTF/SourceCodePro-Regular.ttf -P "${ROOTFS_DIR}/usr/share/fonts/truetype/sourcecodepro"
+#wget https://github.com/adobe-fonts/source-code-pro/releases/download/2.030R-ro%2F1.050R-it/source-code-pro-2.030R-ro-1.050R-it.zip -P files
+unzip files/source-code-pro-2.030R-ro-1.050R-it-TTF.zip -d "files/source-code-pro"
+install -v -m 644 files/source-code-pro/* "${ROOTFS_DIR}/usr/share/fonts/truetype/sourcecodepro"
+rm -r files/source-code-pro/
+
 
 #install -v -o ${PI_USER} -g ${PI_USER} -m 755 files/geany-gtk2 "${ROOTFS_DIR}/usr/bin/"
 tar xzvf files/geany-gtk2.tar.gz -C "${ROOTFS_DIR}/usr/bin/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
 tar xzvf files/geany-gtk2-lib.tar.gz -C "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/geany.gtkrc "${ROOTFS_DIR}/usr/share/geany/"
-
 install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/geany"
+install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/geany/colorschemes"
+git clone https://github.com/geany/geany-themes files/geany-themes
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/geany-themes/colorschemes/*.conf "${ROOTFS_DIR}/home/pi/.config/geany/colorschemes"
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/keybindings.conf "${ROOTFS_DIR}/home/pi/.config/geany/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/geany.conf "${ROOTFS_DIR}/home/pi/.config/geany/"
+rm -rf files/geany-themes
+
 
 rm -rf files/bcmstat
 git clone https://github.com/MilhouseVH/bcmstat.git files/bcmstat
