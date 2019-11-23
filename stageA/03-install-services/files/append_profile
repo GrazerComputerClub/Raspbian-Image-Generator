@@ -1,0 +1,13 @@
+
+function geany() { 
+	if [ `cat /proc/cpuinfo | grep -e "^processor" | wc -l` = 1 ]; then 
+    echo "start geany with GTK 2 (slow system)" 
+		geany-gtk2 "$@"
+	else 
+		geany-gtk3 "$@"
+	fi
+}
+
+sh /etc/motd.sh
+
+

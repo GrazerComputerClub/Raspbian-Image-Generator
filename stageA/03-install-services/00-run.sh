@@ -30,7 +30,7 @@ install -v -m 755 -d "${ROOTFS_DIR}/usr/share/png/"
 install -v -m 664 files/git/png/* "${ROOTFS_DIR}/usr/share/png/"
 # no etc/* because of append rc.local!
 install -v -m 755 files/git/etc/*.sh "${ROOTFS_DIR}/etc/"
-echo "sh /etc/motd.sh" >> ${ROOTFS_DIR}/home/pi/.profile
+cat files/append_profile >> ${ROOTFS_DIR}/home/pi/.profile
 sed -i -e 's/^exit 0/ /g' ${ROOTFS_DIR}/etc/rc.local
 cat files/append_rc.local >> ${ROOTFS_DIR}/etc/rc.local
 echo -e "\n\nexit 0" >> ${ROOTFS_DIR}/etc/rc.local
