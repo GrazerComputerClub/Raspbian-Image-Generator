@@ -3,6 +3,10 @@
 _Tool used to create the raspberrypi.org Raspbian images_
 
 ## Modifed by Grazer Computer Club
+
+Travis CI Build (master): [![Build Status](https://travis-ci.org/GrazerComputerClub/Raspbian-Image-Generator.svg?branch=master)](https://travis-ci.org/GrazerComputerClub/Raspbian-Image-Generator)
+
+
  * full-Image [Stage0-2+StageA] - 2.4 GB:
    - Default settings for Austria
    - German keyboard
