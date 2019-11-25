@@ -2,7 +2,11 @@ install:
 - travis_wait 30 sudo apt-get install coreutils quilt parted qemu-user-static debootstrap zerofree zip
   dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl
 script:
-- travis_wait 30 sudo ./build.sh
+- sudo ./clean.sh
+- travis_wait 180 sudo ./build.sh
+- ls ./work/
+- ls ./deploy/
+- cat ./work/*/build.log
 deploy:
   provider: releases
   api_key:
