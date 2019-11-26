@@ -19,7 +19,8 @@ Travis CI Build (master): [![Build Status](https://travis-ci.org/GrazerComputerC
    - AVR and ESP8266 tools
    
    next release:
-   - geany GTK2 for ARM11 single core CPU (Raspberry Pi Zero)  
+   - geany GTK2 for ARM11 single core CPU (Raspberry Pi Zero) 
+   - geany themes and addons
    - Patched lirc version for GPIO IR-Sensor installed
    - [bcmstat](https://github.com/MilhouseVH/bcmstat) avaliable
 
