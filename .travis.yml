@@ -5,9 +5,7 @@ install:
 script:
 - sudo ./clean.sh
 - travis_wait 180 sudo ./build.sh
-- ls ./work/
-- ls ./deploy/
-- cat ./work/*/build.log
+- grep -E '^(?!qemu: Unsupported syscall: \d+$)' ./work/*/build.log
 deploy:
   provider: releases
   api_key:
