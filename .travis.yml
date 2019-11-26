@@ -1,10 +1,9 @@
 dist: bionic
 install:
-- sudo apt-get install coreutils quilt parted qemu-user-static debootstrap zerofree zip
-  dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl
+  - sudo apt-get install coreutils quilt parted qemu-user-static debootstrap zerofree zip dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl
 script:
-- travis_wait 180 sudo ./build.sh
-- grep -E '^(?!qemu: Unsupported syscall: \d+$)' ./work/*/build.log
+  - travis_wait 180 sudo ./build.sh
+  - grep -E '^(?!qemu: Unsupported syscall: \d+$)' ./work/*/build.log
 deploy:
   provider: releases
   api_key:
