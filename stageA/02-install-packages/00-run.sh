@@ -22,11 +22,12 @@ unzip files/source-code-pro-2.030R-ro-1.050R-it-TTF.zip -d "files/source-code-pr
 install -v -m 644 files/source-code-pro/* "${ROOTFS_DIR}/usr/share/fonts/truetype/sourcecodepro"
 rm -r files/source-code-pro/
 
+install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/gtkrc-2.0 "${ROOTFS_DIR}/home/pi/.gtkrc-2.0"
 
 #install -v -o ${PI_USER} -g ${PI_USER} -m 755 files/geany-gtk2 "${ROOTFS_DIR}/usr/bin/"
-tar xzvf files/geany-gtk2.tar.gz -C "${ROOTFS_DIR}/usr/bin/"
+tar xzvf files/geany-1.33-gtk2.tar.gz -C "${ROOTFS_DIR}/usr/bin/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
-tar xzvf files/geany-gtk2-lib.tar.gz -C "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
+tar xzvf files/geany-1.33-gtk2-lib.tar.gz -C "${ROOTFS_DIR}/usr/lib/arm-linux-gnueabihf/geany-gtk2/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 644 files/geany.gtkrc "${ROOTFS_DIR}/usr/share/geany/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 700 -d "${ROOTFS_DIR}/home/pi/.config/geany"
