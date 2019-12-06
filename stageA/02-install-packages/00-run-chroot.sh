@@ -12,4 +12,7 @@ rm /home/pi/*.deb
 chown -R root:root /usr/bin/geany-gtk2
 chown -R root:root /usr/lib/arm-linux-gnueabihf/geany-gtk2/*
 
+#disable monodoc-http service - to free ram
+systemctl disable mono-xsp4.service
+
 
