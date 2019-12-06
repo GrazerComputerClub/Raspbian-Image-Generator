@@ -8,5 +8,4 @@ geany geany-plugins geany-plugin-addons stterm lilyterm libvte9 libvte-2.91-0 li
 minicom screen avrdude gcc-avr avr-libc esptool i2c-tools
 fbi
 lighttpd
-privoxy
-
+bc p7zip-full
