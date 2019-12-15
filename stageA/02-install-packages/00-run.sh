@@ -13,7 +13,7 @@ wget -P "files" https://github.com/espressif/ESP8266_NONOS_SDK/archive/v2.2.1.zi
 unzip files/v2.2.1.zip -d ${ROOTFS_DIR}/opt/
 rm files/v2.2.1.zip
 
-if [ `uname -m` = "armhf" ];  then
+if [ `uname -m` = "armv7l" ];  then
   #replace C# Mono librarys with Pi Zero compatible ones (fix error for build system with ARMv7 CPU)
   tar xzvf files/mono_pi0.tar.gz -C "${ROOTFS_DIR}/usr/lib/mono/aot-cache/arm"
 fi
