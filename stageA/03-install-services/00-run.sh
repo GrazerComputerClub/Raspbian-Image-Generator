@@ -51,6 +51,15 @@ cp -rv files/git/www/* "${ROOTFS_DIR}/var/www/html"
 wget -P "${ROOTFS_DIR}/var/www/html/PDF" https://github.com/GrazerComputerClub/Raspjamming/releases/latest/download/Raspjamming.pdf
 rm -rf files/git
 
+rm -rf files/pico8-carts
+install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.lexaloffle/pico-8/carts"
+wget https://raw.githubusercontent.com/mstroh76/pico8/master/carts/youare.p8.png -P files/pico8-carts
+wget https://github.com/DanielOaks/pico-8/raw/master/demo_effects/scrolling_stars.p8 -P files/pico8-carts
+wget https://github.com/DanielOaks/pico-8/raw/master/demo_effects/3d_cube.p8 -P files/pico8-carts
+wget https://github.com/DanielOaks/pico-8/raw/master/demo_effects/music_sync.p8 -P files/pico8-carts
+install -v -o ${PI_USER} -g ${PI_USER} -m 664 files/pico8-carts/*.p8* "${ROOTFS_DIR}/home/pi/.lexaloffle/pico-8/carts"
+rm -rf files/pico8-carts
+
 ## GC2-xHAT
 ## eeprom-settings
 wget https://raw.githubusercontent.com/GrazerComputerClub/GC2-xHAT/master/EEPROM/eeprom_settings.txt -O files/GC2-xHAT_eeprom_settings.txt 
