@@ -19,16 +19,20 @@ gpu_mem_128=32
 gpu_mem_512=48
 
 
-## Overclock
+## Overclocking
 
 # activate overclocking Raspberry Pi Zero (~3%) 
 #include Overclock_Pi0.txt
+# activate Turbo overclocking Raspberry Pi Zero (~16%) 
+#include Overclock_Pi0_Turbo.txt
 
-# activate Modest overclocking Paspberry Pi 1 (~14%)
-#include OverclockModest_Pi1.txt
-
+# activate overclocking Paspberry Pi 1 (~14%)
+#include Overclock_Pi1.txt
 # activate Turbo overclock Paspberry Pi 1 (~40%)
-#include OverclockTurbo_Pi1.txt
+#include Overclock_Pi1_Turbo.txt
+
+# activate overclocking Paspberry Pi 2 (~11%)
+#include Overclock_Pi2.txt
 
 
 ## Additional GPIO hardware
@@ -42,7 +46,7 @@ gpu_mem_512=48
 # activate for Pi-XO hardware (check display setting)
 #include Pi-XO.txt 
 
-# I2C0 EEPROM HAT (programming) 
+# I2C0 EEPROM HAT (needed for programming) 
 #dtparam=i2c_vc=on
 
 # DS18B20 temperatur sensor at GPIO4
