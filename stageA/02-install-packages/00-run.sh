@@ -45,7 +45,7 @@ rm -rf files/geany-themes
 
 rm -rf files/bcmstat
 git clone https://github.com/MilhouseVH/bcmstat.git files/bcmstat
-install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/bcmstat/bcmstat.sh "${ROOTFS_DIR}/usr/local/bin/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/bcmstat/bcmstat.sh "${ROOTFS_DIR}/usr/local/bin/bcmstat"
 install -v -o ${PI_USER} -g ${PI_USER} -m 444 files/bcmstat/LICENSE "${ROOTFS_DIR}/usr/local/bin/bcmstat.LICENSE"
 rm -rf files/bcmstat
 
