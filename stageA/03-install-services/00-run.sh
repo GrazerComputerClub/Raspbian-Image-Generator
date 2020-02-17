@@ -41,6 +41,9 @@ install -v -o ${PI_USER} -g ${PI_USER} -m 775 -d "${ROOTFS_DIR}/home/pi/scripts/
 install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/git/scripts/* "${ROOTFS_DIR}/home/pi/scripts/"
 install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 -d "${ROOTFS_DIR}/var/www/html/scripts/"
 install -v -o ${WWW_USER} -g ${WWW_USER} -m 775 files/git/scripts/* "${ROOTFS_DIR}/var/www/html/scripts/"
+install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.picodrive"
+install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/git/home/.picodrive/* "${ROOTFS_DIR}/home/pi/.picodrive"
+
 
 #deactivated - because of manual start fbcp via pico8 start script
 #install -m 664 files/udev/*.rules "${ROOTFS_DIR}/etc/udev/rules.d/"
