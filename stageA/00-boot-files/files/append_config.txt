@@ -46,6 +46,9 @@ gpu_mem_512=48
 # activate for Pi-XO hardware (check display setting)
 #include Pi-XO.txt 
 
+# activate for Game0-xHAT hardware (check display setting)
+#include Game0-xHAT.txt 
+
 # I2C0 EEPROM HAT (needed for programming) 
 #dtparam=i2c_vc=on
 
