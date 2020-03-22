@@ -56,7 +56,11 @@ rm -rf files/git
 
 rm -rf files/pico8-carts
 install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.lexaloffle/pico-8/carts"
+install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.lexaloffle/pico-8/bbs"
+install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.lexaloffle/pico-8/bbs/carts"
+install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.lexaloffle/pico-8/bbs/labels"
 wget https://raw.githubusercontent.com/mstroh76/pico8/master/carts/youare.p8.png -P files/pico8-carts
+# https://github.com/DanielOaks/ pico-8 sample cc0
 wget https://github.com/DanielOaks/pico-8/raw/master/demo_effects/scrolling_stars.p8 -P files/pico8-carts
 wget https://github.com/DanielOaks/pico-8/raw/master/demo_effects/3d_cube.p8 -P files/pico8-carts
 wget https://github.com/DanielOaks/pico-8/raw/master/demo_effects/music_sync.p8 -P files/pico8-carts
