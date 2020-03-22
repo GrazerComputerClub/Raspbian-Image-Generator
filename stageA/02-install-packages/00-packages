@@ -6,6 +6,6 @@ raspi-gpio wiringpi pigpio git build-essential automake cmake vim libtool scons
 gtk2-engines-pixbuf gtk-theme-switch gtk2-engines
 geany geany-plugins geany-plugin-addons stterm lilyterm libvte9 libvte-2.91-0 libfreetype6 libfontconfig1 libgtk2.0-0 libpangoft2-1.0-0
 minicom screen avrdude gcc-avr avr-libc esptool i2c-tools
-fbi omxplayer
+fbi omxplayer fbcat
 lighttpd
 joystick zlib1g libpng16-16 libasound2 libsdl1.2debian
