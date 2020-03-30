@@ -10,4 +10,4 @@ KEYBOARD_LAYOUT=Deutsch
 TIMEZONE_DEFAULT=Europe/Vienna
 LOCALE_DEFAULT=de_AT.UTF-8
 ENABLE_SSH=1
-STAGE_LIST="stage0 stage1 stage2 stageA"
+STAGE_LIST="stage0 stage1 stage2 stageA stage3 stage4"
