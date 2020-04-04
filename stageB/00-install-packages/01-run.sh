@@ -8,4 +8,4 @@ update-alternatives --install /usr/bin/gnome-www-browser \
 EOF
 
 cp files/GC2_Logo.png ${ROOTFS_DIR}/usr/share/lxde/images/GC2.png
-cp -rf files/config/* ${ROOTFS_DIR}/home/pi/.config/
+cp -rvf files/config/* ${ROOTFS_DIR}/home/pi/.config/
