@@ -9,6 +9,9 @@ include Video-720p.txt
 dtoverlay=dwc2
 [all]
 
+# activate OTG mode for Raspberry Pi A(+)
+#dtoverlay=dwc2,dr_mode=peripheral
+
 #activate UART/RS232
 enable_uart=1
 
@@ -35,6 +38,12 @@ gpu_mem_512=48
 
 # activate overclocking Paspberry Pi 2 (~11%)
 #include Overclock_Pi2.txt
+
+
+## Compatibility
+
+# Selects the bcm2835-mmc SD/MMC driver (needed for old Intenso cards)
+#dtoverlay=mmc
 
 
 ## Additional GPIO hardware
