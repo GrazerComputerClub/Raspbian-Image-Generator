@@ -9,3 +9,4 @@ minicom screen avrdude gcc-avr avr-libc esptool i2c-tools
 fbi omxplayer fbcat
 lighttpd
 joystick zlib1g libpng16-16 libasound2 libsdl1.2debian
+stress iotop
