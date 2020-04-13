@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+PI_USER=1000
+
 on_chroot << EOF
 update-alternatives --install /usr/bin/x-www-browser \
   x-www-browser /usr/bin/chromium-browser 86
@@ -13,4 +15,6 @@ cp -rvf files/config/* ${ROOTFS_DIR}/home/pi/.config/
 cp -v menu/gc2-menu.menu ${ROOTFS_DIR}/var/lib/menu-xdg/menus/
 ln -s ${ROOTFS_DIR}/var/lib/menu-xdg/menus/gc2-menu.menu ${ROOTFS_DIR}/etc/xdg/menus/gc2-menu.menu
 cp -v menu/*.desktop ${ROOTFS_DIR}/var/lib/menu-xdg/applications/menu-xdg/
+
+install -v -o ${PI_USER} -g ${PI_USER}  files/.conkyrc "${ROOTFS_DIR}/home/pi/"
 
