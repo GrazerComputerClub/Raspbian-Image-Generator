@@ -12,9 +12,9 @@ EOF
 cp files/GC2_Logo.png ${ROOTFS_DIR}/usr/share/lxde/images/GC2.png
 cp -rvf files/config/* ${ROOTFS_DIR}/home/pi/.config/
 
-cp -v menu/gc2-menu.menu ${ROOTFS_DIR}/var/lib/menu-xdg/menus/
+cp -v files/menu/gc2-menu.menu ${ROOTFS_DIR}/var/lib/menu-xdg/menus/
 ln -s ${ROOTFS_DIR}/var/lib/menu-xdg/menus/gc2-menu.menu ${ROOTFS_DIR}/etc/xdg/menus/gc2-menu.menu
-cp -v menu/*.desktop ${ROOTFS_DIR}/var/lib/menu-xdg/applications/menu-xdg/
+cp -v files/menu/*.desktop ${ROOTFS_DIR}/var/lib/menu-xdg/applications/menu-xdg/
 
-install -v -o ${PI_USER} -g ${PI_USER}  files/.conkyrc "${ROOTFS_DIR}/home/pi/"
+install -v -o ${PI_USER} -g ${PI_USER} files/.conkyrc "${ROOTFS_DIR}/home/pi/"
 
