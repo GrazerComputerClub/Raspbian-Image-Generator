@@ -4,6 +4,7 @@
 apt-get install /home/pi/wiringpi-latest.deb
 #apt-get install -y --allow-downgrades /home/pi/RPi.GPIO-py3-latest.deb
 #apt-get install -y --allow-downgrades /home/pi/RPi.GPIO-py2-latest.deb
+#apt-mark hold python-rpi.gpio python3-rpi.gpio
 
 #rm /home/pi/*.deb
 rm -v /home/pi/wiringpi*.deb
