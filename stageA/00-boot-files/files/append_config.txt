@@ -18,10 +18,21 @@ enable_uart=1
 #I2C speed
 #dtparam=i2c_arm_baudrate=400000
 
+
 ## GPU memory 
 
-gpu_mem_128=32
+#16MB and 48MB won't be enough for video acceleration and camera feature
+# camera need 128MB
+# video need 64MB
+gpu_mem_256=16
 gpu_mem_512=48
+gpu_mem_1024=128
+
+
+## USB current limit
+
+# Pi2 USB aggregate is 600mA and can be increased to 1200mA  
+max_usb_current=1
 
 
 ## Overclocking
@@ -69,4 +80,5 @@ gpu_mem_512=48
 # TSOP4838 IR-receiver at GPIO27
 #dtoverlay=gpio-ir,gpio_pin=27
 
-
+# Camera led off
+#disable_camera_led=1
