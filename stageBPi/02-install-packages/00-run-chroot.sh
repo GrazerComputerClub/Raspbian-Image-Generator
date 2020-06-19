@@ -21,6 +21,6 @@ apt-mark hold python3-gpiozero
 rm -v /home/pi/wiringpi*.deb /home/pi/RPi.GPIO*.deb /home/pi/gpiozero.patch
 
 # BananaPi not supported by pigpio, avoid using
-sudo apt -y remove pigpio libpigpio-dev libpigpio1 libpigpiod-if-dev libpigpiod-if1 libpigpiod-if2-1 pigpio-tools pigpiod
+sudo apt -y remove pigpio libpigpio-dev libpigpio1 libpigpiod-if-dev libpigpiod-if1 libpigpiod-if2-1 pigpio-tools pigpiod omxplayer
 
 
