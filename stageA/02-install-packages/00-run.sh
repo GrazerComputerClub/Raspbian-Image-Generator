@@ -4,7 +4,10 @@ WWW_USER=33
 PI_USER=1000
 
 date +"%y.%m" > ${ROOTFS_DIR}/etc/raspjamming_version
-patch -N ${ROOTFS_DIR}/etc/avrdude.conf files/avrdude.patch
+#patch -N ${ROOTFS_DIR}/etc/avrdude.conf files/avrdude.patch
+OUT=$(sudo patch -N ${ROOTFS_DIR}/etc/avrdude.conf files/avrdude.patch) || echo "${OUT}" | grep "Skipping patch" -q ||  (echo "$OUT" && false);
+
+
 #patch -N ${ROOTFS_DIR}/etc/lighttpd/lighttpd.conf files/lighttpd.patch
 cat files/lighttpd.append >> ${ROOTFS_DIR}/etc/lighttpd/lighttpd.conf
 install -v -o ${WWW_USER} -g ${WWW_USER} -m 664 files/lighttpd-dir.css "${ROOTFS_DIR}/var/www/html/"

@@ -5,11 +5,14 @@ PI_USER=1000
 
 # copy patches
 git clone https://github.com/GrazerComputerClub/Banana-Pi-M2-Zero.git files/Banana-Pi-M2-Zero
-mv files/Banana-Pi-M2-Zero/patch/*.diff 01-patches
-ls 01-patches | grep .diff > 01-patches/series
+#mv files/Banana-Pi-M2-Zero/patch/*.diff 01-patches
+#ls 01-patches | grep .diff > 01-patches/series
 
 # revert old changes for avrdude (needed for patch)
 cp -fv "${ROOTFS_DIR}/etc/avrdude.conf.orig" "${ROOTFS_DIR}/etc/avrdude.conf"
+#patch -N ${ROOTFS_DIR}/etc/avrdude.conf files/Banana-Pi-M2-Zero/patch/avrdude.diff
+OUT=$(sudo patch -N ${ROOTFS_DIR}/etc/avrdude.conf files/Banana-Pi-M2-Zero/patch/avrdude.diff) || echo "${OUT}" | grep "Skipping patch" -q ||  (echo "$OUT" && false);
+
 
 #install replace bin
 cp -fv files/Banana-Pi-M2-Zero/bin/* "${ROOTFS_DIR}/usr/local/bin"

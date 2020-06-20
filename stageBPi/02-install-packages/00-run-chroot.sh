@@ -15,7 +15,9 @@ cp -v /usr/lib/python3/dist-packages/RPi.GPIO-0.7.*.egg-info /usr/local/lib/pyth
 apt-mark hold python-rpi.gpio python3-rpi.gpio
 
 # install gpiozero
-patch /usr/lib/python3/dist-packages/gpiozero/pins/data.py /home/pi/gpiozero.patch
+#patch /usr/lib/python3/dist-packages/gpiozero/pins/data.py /home/pi/gpiozero.patch
+OUT=$(sudo patch -N /usr/lib/python3/dist-packages/gpiozero/pins/data.py /home/pi/gpiozero.patch) || echo "${OUT}" | grep "Skipping patch" -q ||  (echo "$OUT" && false);
+
 apt-mark hold python3-gpiozero
 
 rm -v /home/pi/wiringpi*.deb /home/pi/RPi.GPIO*.deb /home/pi/gpiozero.patch
