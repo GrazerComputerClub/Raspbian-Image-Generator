@@ -8,11 +8,11 @@ apt-mark hold wiringpi
 apt-get install -y --allow-downgrades /home/pi/RPi.GPIO-py3-latest.deb
 apt-get install -y --allow-downgrades /home/pi/RPi.GPIO-py2-latest.deb
 ## replace RPi.GPIO in /usr/local/lib/python3.7/ too!
-rm -r /usr/local/lib/python3.7/dist-packages/RPi/ 
-rm -r /usr/local/lib/python3.7/dist-packages/RPi.GPIO-0.7.0.dist-info 
+rm -r /usr/local/lib/python3.7/dist-packages/RPi/
+rm -r /usr/local/lib/python3.7/dist-packages/RPi.GPIO-0.7.*.dist-info
 cp -vr /usr/lib/python3/dist-packages/RPi /usr/local/lib/python3.7/dist-packages/
-cp -v /usr/lib/python3/dist-packages/RPi.GPIO-0.7.0.egg-info /usr/local/lib/python3.7/dist-packages/
-apt-mark hold python-rpi.gpio python3-rpi.gpio 
+cp -v /usr/lib/python3/dist-packages/RPi.GPIO-0.7.*.egg-info /usr/local/lib/python3.7/dist-packages/
+apt-mark hold python-rpi.gpio python3-rpi.gpio
 
 # install gpiozero
 patch /usr/lib/python3/dist-packages/gpiozero/pins/data.py /home/pi/gpiozero.patch
