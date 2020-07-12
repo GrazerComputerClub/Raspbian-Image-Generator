@@ -19,9 +19,9 @@ cp -fv files/Banana-Pi-M2-Zero/bin/* "${ROOTFS_DIR}/usr/local/bin"
 
 
 # install GC2 version of gpio librarys
-wget https://github.com/GrazerComputerClub/WiringPi/releases/download/2.60.200613/wiringpi-2.60.200613-1_armhf.deb -O "${ROOTFS_DIR}/home/pi/wiringpi-latest.deb"
-wget https://github.com/GrazerComputerClub/RPi.GPIO/releases/download/0.7.200620-2/python3-rpi.gpio_0.7.200620.buster-1_armhf.deb -O "${ROOTFS_DIR}/home/pi/RPi.GPIO-py3-latest.deb"
-wget https://github.com/GrazerComputerClub/RPi.GPIO/releases/download/0.7.200620-2/python-rpi.gpio_0.7.200620.buster-1_armhf.deb -O "${ROOTFS_DIR}/home/pi/RPi.GPIO-py2-latest.deb"
+wget https://github.com/GrazerComputerClub/WiringPi/releases/download/2.60.200712/wiringpi-2.60.200712-1_armhf.deb -O "${ROOTFS_DIR}/home/pi/wiringpi-latest.deb"
+wget https://github.com/GrazerComputerClub/RPi.GPIO/releases/download/0.7.200708/python3-rpi.gpio_0.7.200708.buster-1_armhf.deb -O "${ROOTFS_DIR}/home/pi/RPi.GPIO-py3-latest.deb"
+wget https://github.com/GrazerComputerClub/RPi.GPIO/releases/download/0.7.200708/python-rpi.gpio_0.7.200708.buster-1_armhf.deb -O "${ROOTFS_DIR}/home/pi/RPi.GPIO-py2-latest.deb"
 wget https://github.com/GrazerComputerClub/RPi.GPIO/releases/download/v0.7.0-buster1/gpiozero.patch -O "${ROOTFS_DIR}/home/pi/gpiozero.patch"
 
 ## old bananapi recognition for old librarys
