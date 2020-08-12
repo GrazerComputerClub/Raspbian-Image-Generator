@@ -3,9 +3,10 @@
 WWW_USER=33
 
 # tiggerhappy: shutdown
-chmod u+s /sbin/halt
+#chmod u+s /sbin/halt
 # tiggerhappy: speaker level control
-adduser nobody audio
+#adduser nobody audio
+# now change triggerhappy to user pi
 
 chown -R ${WWW_USER}:${WWW_USER} /var/www/
 #chown -R ${WWW_USER}:${WWW_USER} /var/www/html/Blockly-gPIo/

@@ -23,9 +23,12 @@ cp -v files/git/examples/Deutsch/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-
 cp -v files/git/examples/English/*.xml "${ROOTFS_DIR}/var/www/html/Blockly-gPIo-examples/English"
 unzip files/lighttpd_cache.zip -d "${ROOTFS_DIR}/var/cache/lighttpd/compress/"
 
+# change triggerhappy user from nobody to pi
+sed -i -e 's/nobody/pi/g' ${ROOTFS_DIR}/lib/systemd/system/triggerhappy.service
+
 ## Raspjamming-Image installation
 rm -rf files/git
-git clone https://github.com/GrazerComputerClub/Raspjamming-Image/ files/git
+git clone https://github.com/GrazerComputerClub/Raspjamming-OS files/git
 install -v -m 755 -d "${ROOTFS_DIR}/usr/share/png/"
 install -v -m 664 files/git/png/* "${ROOTFS_DIR}/usr/share/png/"
 # no etc/* because of append rc.local!
@@ -36,6 +39,8 @@ cat files/append_rc.local >> ${ROOTFS_DIR}/etc/rc.local
 echo -e "\n\nexit 0" >> ${ROOTFS_DIR}/etc/rc.local
 install -v -m 664 files/git/etc/triggerhappy/* "${ROOTFS_DIR}/etc/triggerhappy/triggers.d/"
 install -v -m 775 files/git/bin/* "${ROOTFS_DIR}/usr/local/bin/"
+rm "${ROOTFS_DIR}/usr/local/bin/raspi2png"
+install -v -m 775 files/git/bin/raspi2png "${ROOTFS_DIR}/usr/bin/"
 install -v -m 664 files/git/systemd/*.service "${ROOTFS_DIR}/etc/systemd/system/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 775 -d "${ROOTFS_DIR}/home/pi/scripts/"
 install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/git/scripts/* "${ROOTFS_DIR}/home/pi/scripts/"
