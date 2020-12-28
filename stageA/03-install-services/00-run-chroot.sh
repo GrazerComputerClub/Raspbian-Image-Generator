@@ -13,7 +13,9 @@ chown -R ${WWW_USER}:${WWW_USER} /var/www/
 chown -R ${WWW_USER}:${WWW_USER} /var/cache/lighttpd/compress/
 
 systemctl enable dmxvnc
-systemctl enable splashscreen
-systemctl enable offscreen
+#  -- displaytool not supported by kernel 5 --
+#systemctl enable splashscreen
+#systemctl enable offscreen
+#  -- 
 #systemctl enable mcp3202
 systemctl enable blockly-gpio

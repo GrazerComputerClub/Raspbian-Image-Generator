@@ -50,7 +50,7 @@ install -v -o ${PI_USER} -g ${PI_USER} -m 755 -d "${ROOTFS_DIR}/home/pi/.picodri
 install -v -o ${PI_USER} -g ${PI_USER} -m 775 files/git/home/.picodrive/* "${ROOTFS_DIR}/home/pi/.picodrive"
 
 
-#deactivated - because of manual start fbcp via pico8 start script
+#deactivated - because of manual start fbcp via pico8 start script and even not supported by Kernel 5
 #install -m 664 files/udev/*.rules "${ROOTFS_DIR}/etc/udev/rules.d/"
 file="${ROOTFS_DIR}/var/www/html/index.html"
 [ -f $file ] && rm $file 
