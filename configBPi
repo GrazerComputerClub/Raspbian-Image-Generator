@@ -1,7 +1,7 @@
 # Raspjamming base image
 IMG_NAME=Raspjamming
 DEPLOY_ZIP=1
-HOSTNAME=bananapi
+TARGET_HOSTNAME=bananapi
 #WPA_ESSID=Raspjamming
 #WPA_PASSWORD=Raspjamming@GC2
 #WPA_COUNTRY=AT

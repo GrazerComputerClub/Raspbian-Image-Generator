@@ -2,5 +2,5 @@
 IMG_NAME=CIRCLean-USB-Sanitizer
 DEPLOY_ZIP=1
 FIRST_USER_PASS=sanitizer
-HOSTNAME=sanitizer
+TARGET_HOSTNAME=sanitizer
 STAGE_LIST="stage0 stage1 stage2 stageS"
